@@ -1,17 +1,24 @@
 # Homework & Lab 7 - Multi-Screen Navigation
 
-**Sole Space** is a Flutter sneaker-store demo.
+**Sole Space** is a Flutter sneaker store demo using photographs of real sneaker models.
 
 ## Features
 
-- Feed: four products with image, title, category and price
+- Feed: four real-world sneaker models with catalog photographs, titles, categories and demo prices
 - Favorites: save and remove items
 - Profile: account view and working Notifications switch
 - DetailScreen: Navigator.push passes the complete Product object
-- Two working Navigator.pop controls: app bar back arrow and in-body button
+- Two working Navigator.pop controls: AppBar back arrow and in-body button
 - Favorite items and selected tab remain in memory after navigating back
 
-The product photos are loaded from Unsplash; internet is required to see them. An icon placeholder is shown if a photo cannot load.
+## Products and photo sources
+
+- Nike Air Force 1 '07 (white) — [SNIPES](https://www.snipes.com/de-ch/p/nike-air-force-1-07-whitewhite-air-force-1-07-weiss-1727)
+- adidas Samba (white/black) — [BeyondStyle](https://www.beyondstyle.us/prod/adidas-originals-samba-mens?id=champssports_B75806)
+- Converse Chuck Taylor All Star High Top (black) — [Converse](https://www.converse.hr/chuck-taylor-all-star-cm9160c)
+- New Balance 574 Greenleaf (grey) — [Super Runners Shop](https://superrunnersshop.com/products/mens-new-balance-574-greenleaf-ml574evg)
+
+The photos are loaded from external product listings and are credited to their respective websites; the demo does not claim to own them. An internet connection is needed to load photos, and a fallback icon is shown if an external source cannot be reached. Prices are fictional demo prices, not current store offers.
 
 ## Run
 
