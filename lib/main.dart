@@ -28,7 +28,7 @@ const List<Product> sampleProducts = [
         'A lightweight everyday sneaker designed for comfort, flexibility, '
         'and long walks. Its cushioned sole supports every step, while the '
         'breathable upper keeps your feet comfortable throughout the day.',
-    imagePath: 'assets/images/velocity.png',
+    imagePath: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=80',
     price: 129.99,
     category: 'Running',
   ),
@@ -39,7 +39,7 @@ const List<Product> sampleProducts = [
         'A clean low-top sneaker for casual outfits. Soft lining, a durable '
         'rubber sole, and a timeless silhouette make this an easy choice '
         'for daily wear.',
-    imagePath: 'assets/images/street.png',
+    imagePath: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=900&q=80',
     price: 94.50,
     category: 'Lifestyle',
   ),
@@ -50,7 +50,7 @@ const List<Product> sampleProducts = [
         'A bold high-top sneaker with extra ankle support and a comfortable '
         'padded collar. Built to stand out while remaining practical for '
         'the city.',
-    imagePath: 'assets/images/nova.png',
+    imagePath: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=80',
     price: 149.00,
     category: 'Streetwear',
   ),
@@ -61,7 +61,7 @@ const List<Product> sampleProducts = [
         'Take the scenic route with a grippy outsole and reinforced upper. '
         'This pair is made for park paths, outdoor adventures, and changing '
         'weather.',
-    imagePath: 'assets/images/trail.png',
+    imagePath: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=900&q=80',
     price: 119.00,
     category: 'Outdoor',
   ),
@@ -281,11 +281,15 @@ class ProductCard extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
+                child: Image.network(
                   product.imagePath,
                   width: 124,
                   height: 112,
                   fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) => const ColoredBox(
+                    color: Color(0xFFE8E7F7),
+                    child: SizedBox(width: 124, height: 112, child: Icon(Icons.shopping_bag, size: 40)),
+                  ),
                 ),
               ),
               const SizedBox(width: 14),
@@ -496,10 +500,14 @@ class _DetailScreenState extends State<DetailScreen> {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(22),
-                  child: Image.asset(
+                  child: Image.network(
                     product.imagePath,
                     height: 275,
                     fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) => const ColoredBox(
+                      color: Color(0xFFE8E7F7),
+                      child: SizedBox(height: 275, child: Icon(Icons.shopping_bag, size: 90)),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 22),
