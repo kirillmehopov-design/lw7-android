@@ -23,47 +23,35 @@ class Product {
 const List<Product> sampleProducts = [
   Product(
     id: 'velocity',
-    title: 'Velocity Runner',
-    description:
-        'A lightweight everyday sneaker designed for comfort, flexibility, '
-        'and long walks. Its cushioned sole supports every step, while the '
-        'breathable upper keeps your feet comfortable throughout the day.',
-    imagePath: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=80',
+    title: "Nike Air Force 1 '07",
+    description: "A classic all-white Nike low-top sneaker with leather panels, perforated toe box, durable rubber outsole and Air cushioning. A versatile everyday style.",
+    imagePath: "https://asset.snipes.com/images/f_auto%2Cq_80%2Cd_fallback-sni.png/b_rgb%3Af8f8f8%2Cc_pad%2Cw_680%2Ch_680/dpr_1.0/01126425_2/nike-air-force-1-%2707-weiss-1727-2",
     price: 129.99,
-    category: 'Running',
+    category: 'Lifestyle',
   ),
   Product(
     id: 'street',
-    title: 'Street Classic',
-    description:
-        'A clean low-top sneaker for casual outfits. Soft lining, a durable '
-        'rubber sole, and a timeless silhouette make this an easy choice '
-        'for daily wear.',
-    imagePath: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=900&q=80',
+    title: "adidas Samba OG",
+    description: "The iconic adidas Samba features a low-profile silhouette, contrast three stripes and a gum rubber outsole. A recognizable classic for casual wear.",
+    imagePath: "https://5thave-img-cdn.beyondstyle.us/pf/99b373df-5abd-3e1c-a63b-5a6939846995.jpg?x-oss-process=style%2Fs1",
     price: 94.50,
     category: 'Lifestyle',
   ),
   Product(
     id: 'nova',
-    title: 'Nova High Top',
-    description:
-        'A bold high-top sneaker with extra ankle support and a comfortable '
-        'padded collar. Built to stand out while remaining practical for '
-        'the city.',
-    imagePath: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&q=80',
+    title: "Converse Chuck Taylor All Star",
+    description: "The classic Converse high-top canvas sneaker with a rubber toe cap, iconic ankle patch and vulcanized sole. Made for timeless casual street style.",
+    imagePath: "https://dr9l7gb9cebpv.cloudfront.net/media/catalog/product/cache/2774d42b8e55ba58cfe3fc9632392955/m/9/m9160_a_107x1_2.jpg",
     price: 149.00,
     category: 'Streetwear',
   ),
   Product(
     id: 'trail',
-    title: 'Trail Explorer',
-    description:
-        'Take the scenic route with a grippy outsole and reinforced upper. '
-        'This pair is made for park paths, outdoor adventures, and changing '
-        'weather.',
-    imagePath: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=900&q=80',
+    title: "New Balance 574",
+    description: "A classic New Balance running-inspired silhouette with a combination upper, supportive cushioning and a durable outsole suited for everyday use.",
+    imagePath: "https://superrunnersshop.com/cdn/shop/products/ml574evg_5.jpg?v=1656688845",
     price: 119.00,
-    category: 'Outdoor',
+    category: 'Lifestyle',
   ),
 ];
 
