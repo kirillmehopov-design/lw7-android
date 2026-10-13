@@ -91,7 +91,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   final Set<String> _favoriteIds = <String>{};
-  bool _notificationsEnabled = true;
+  bool _notificationsEnabled = false;
 
   void _toggleFavorite(Product product) {
     setState(() {
@@ -413,10 +413,41 @@ class ProfileTab extends StatelessWidget {
               const Divider(height: 1),
               SwitchListTile(
                 secondary: const Icon(Icons.notifications_outlined),
-                title: const Text('Notifications'),
-                subtitle: const Text('Receive product updates'),
+                title: const Text('Demo notifications'),
+                subtitle: const Text('Enable in-app notification previews'),
                 value: notificationsEnabled,
-                onChanged: onNotificationsChanged,
+                onChanged: (enabled) {
+                  onNotificationsChanged(enabled);
+                  ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        enabled
+                            ? 'In-app notifications enabled!'
+                            : 'In-app notifications disabled.',
+                      ),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.notifications_active_outlined),
+                title: const Text('Send test notification'),
+                subtitle: const Text('Show a demo notification'),
+                enabled: notificationsEnabled,
+                onTap: notificationsEnabled
+                    ? () {
+                        ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'New arrival! Check out our latest sneakers.',
+                            ),
+                            duration: Duration(seconds: 4),
+                          ),
+                        );
+                      }
+                    : null,
               ),
               const Divider(height: 1),
               const ListTile(
