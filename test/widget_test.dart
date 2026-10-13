@@ -6,8 +6,8 @@ void main() {
       (tester) async {
     await tester.pumpWidget(const SneakerLab7App());
 
-    expect(find.text('Velocity Runner'), findsOneWidget);
-    await tester.tap(find.text('Velocity Runner'));
+    expect(find.text("Nike Air Force 1 '07"), findsOneWidget);
+    await tester.tap(find.text("Nike Air Force 1 '07"));
     await tester.pumpAndSettle();
 
     expect(find.text('Description'), findsOneWidget);
@@ -22,6 +22,6 @@ void main() {
 
     await tester.tap(find.text('Favorites'));
     await tester.pumpAndSettle();
-    expect(find.text('Velocity Runner'), findsOneWidget);
+    expect(find.text("Nike Air Force 1 '07"), findsOneWidget);
   });
 }
